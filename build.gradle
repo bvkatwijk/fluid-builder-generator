@@ -1,0 +1,39 @@
+buildscript {
+
+	repositories {
+		mavenCentral()
+	}
+
+}
+
+apply plugin: "eclipse"
+apply plugin: "scala"
+apply plugin: "java"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+version = '1.0'
+
+repositories {
+	mavenCentral()
+}
+
+sourceSets {
+    main {
+        scala {
+            srcDirs = ['src/main/scala']
+        }
+    }
+    test {
+        scala {
+            srcDirs = ['src/test/scala']
+        }
+    }
+}
+
+dependencies {
+	zinc 'com.typesafe.zinc:zinc:0.3.13'
+	
+	compile 'org.scala-lang:scala-library:2.12.2'
+}
