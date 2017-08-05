@@ -5,3 +5,4 @@
 .settings/org.eclipse.buildship.core.prefs
 .cache-main
 .cache-tests
+/build/
