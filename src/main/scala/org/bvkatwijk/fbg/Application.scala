@@ -1,6 +1,6 @@
 package org.bvkatwijk.fbg
 
-import org.bvkatwijk.fbg.micro.service.MicroService
+import org.bvkatwijk.micro.service.MicroService
 
 object Application {
 
