@@ -41,6 +41,8 @@ sourceSets {
 dependencies {
 	zinc 'com.typesafe.zinc:zinc:0.3.13'
 	
+	compileOnly "org.projectlombok:lombok:1.16.16"
+	
 	compile 'org.scala-lang:scala-library:2.12.2'
 	compile name: 'jersey-service-0.0.1'
 	
