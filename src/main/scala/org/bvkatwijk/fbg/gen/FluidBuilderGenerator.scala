@@ -1,5 +1,7 @@
 package org.bvkatwijk.fbg.gen
 
+import org.bvkatwijk.fbg.gen.inte.WithInterface
+
 class FluidBuilderGenerator {
   
   val singleFieldClassTarget = """
@@ -33,12 +35,7 @@ public class SingleFieldSample {
 		}
 
 	}
-
-	public static interface WithFirstField {
-
-		public BuildSingleFieldSample firstField(String firstField);
-
-	}
+""" + new WithInterface("firstField", "String", "BuildSingleFieldSample").create() + """
 
 	public static interface BuildSingleFieldSample {
 
