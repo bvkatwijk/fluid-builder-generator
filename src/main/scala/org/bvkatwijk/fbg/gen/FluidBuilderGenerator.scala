@@ -1,9 +1,10 @@
 package org.bvkatwijk.fbg.gen
 
 import org.bvkatwijk.fbg.gen.inte.WithInterface
+import org.bvkatwijk.fbg.gen.inte.BuildInterface
 
 class FluidBuilderGenerator {
-  
+
   val singleFieldClassTarget = """
 package org.bvkatwijk.fbg.sample;
 
@@ -35,19 +36,13 @@ public class SingleFieldSample {
 		}
 
 	}
-""" + new WithInterface("firstField", "String", "BuildSingleFieldSample").create() + """
-
-	public static interface BuildSingleFieldSample {
-
-		public SingleFieldSample build();
-
-	}
-
+""" + new WithInterface("firstField", "String", "BuildSingleFieldSample").create() + "\n" +
+    new BuildInterface("SingleFieldSample").create() + "\n" + """
 }
 """
-  
+
   def generate(singleFieldClassSource: String): String = {
     singleFieldClassTarget
   }
-  
+
 }
