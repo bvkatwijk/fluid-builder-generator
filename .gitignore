@@ -6,3 +6,4 @@
 .cache-main
 .cache-tests
 /build/
+.settings/org.eclipse.jdt.core.prefs
