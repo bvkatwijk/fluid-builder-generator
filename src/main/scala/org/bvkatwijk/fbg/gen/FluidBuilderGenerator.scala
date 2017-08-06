@@ -2,6 +2,7 @@ package org.bvkatwijk.fbg.gen
 
 import org.bvkatwijk.fbg.gen.inte.WithInterface
 import org.bvkatwijk.fbg.gen.inte.BuildInterface
+import org.bvkatwijk.fbg.gen.meth.WithMethod
 
 class FluidBuilderGenerator {
 
@@ -23,12 +24,7 @@ public class SingleFieldSample {
 	public static class SingleFieldSampleBuilder implements WithFirstField, BuildSingleFieldSample {
 
 		private String firstField;
-		
-		@Override
-		public BuildSingleFieldSample firstField(String firstField) {
-			this.firstField = firstField;
-			return this;
-		}
+""" + new WithMethod("firstField", "String", "BuildSingleFieldSample").create() + """
 
 		@Override
 		public SingleFieldSample build() {
