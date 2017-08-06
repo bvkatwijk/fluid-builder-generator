@@ -1,4 +1,6 @@
 language: scala
 scala:
    - 2.11.8
+before_install:
+ - chmod +x gradlew
 script: .\gradlew test
