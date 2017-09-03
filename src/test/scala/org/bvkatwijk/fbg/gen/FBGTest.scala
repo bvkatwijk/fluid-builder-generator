@@ -35,7 +35,7 @@ public class SingleFieldSample {
 	public static class SingleFieldSampleBuilder implements WithFirstField, BuildSingleFieldSample {
 
 		private String firstField;
-		
+
 		@Override
 		public BuildSingleFieldSample firstField(String firstField) {
 			this.firstField = firstField;
