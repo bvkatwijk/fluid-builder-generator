@@ -4,6 +4,8 @@ import org.bvkatwijk.fbg.gen.inte.WithInterface
 import org.bvkatwijk.fbg.gen.inte.BuildInterface
 import org.bvkatwijk.fbg.gen.meth.WithMethod
 import org.bvkatwijk.fbg.gen.meth.BuildMethod
+import org.bvkatwijk.fbg.gen.doc.JavaDoc
+import org.bvkatwijk.fbg.gen.doc.GeneratedFluidBuilder
 
 class FluidBuilderGenerator {
 
@@ -21,7 +23,7 @@ public class SingleFieldSample {
 		return new SingleFieldSampleBuilder();
 	}
 
-	/** 2017-08-06 Generated Fluid Builder github.com/bvkatwijk/fluid-builder-generator */
+	""" + GeneratedFluidBuilder.javaDoc + """
 	public static class SingleFieldSampleBuilder implements WithFirstField, BuildSingleFieldSample {
 
 		private String firstField;
